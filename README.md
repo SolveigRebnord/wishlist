@@ -6,7 +6,7 @@ I used Figma to plan the project, and did a small prototype to visualize the dif
 
 ---
 ### Includes
-`React` `Sass` `Javascript` `HTML/CSS`
+`React` `Sass` `Locale Storage` `Javascript` `HTML/CSS`
 
 ---
 
