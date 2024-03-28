@@ -1,0 +1,79 @@
+@import "../variables.scss";
+
+.loader {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $sTitle;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .heart {
+    @keyframes pulse {
+      0% {
+        transform: scale(0.5);
+      }
+      25% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      75% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.5);
+      }
+    }
+
+    animation: pulse 1s ease-in-out infinite;
+  }
+}
+
+.no-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 50px 0;
+
+  img {
+    width: 28px;
+    padding-bottom: 30px;
+  }
+
+  span:last-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+  }
+}
+
+@media screen and (max-width: $medium-screen) {
+  .loader {
+    width: 100%;
+    position: relative;
+    margin: 44px auto;
+  }
+
+  .no-products {
+    gap: 12px;
+
+    img {
+      width: 22px;
+      padding-bottom: 18px;
+    }
+  }
+}

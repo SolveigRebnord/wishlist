@@ -1,0 +1,142 @@
+@import "../variables.scss";
+
+.search {
+  width: 320px;
+  margin: 50px auto 50px auto;
+}
+
+.input-placeholder {
+  position: relative;
+  padding: 8px 20px;
+  border-bottom: $black solid 0.5px;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 11px;
+
+  input {
+    padding-left: 14px;
+    width: 100%;
+    letter-spacing: 0.3px;
+  }
+
+  input::placeholder {
+    font-size: 10px;
+    font-style: italic;
+  }
+}
+
+.search-btn {
+  opacity: 0;
+  position: absolute;
+  right: 14px;
+  transition: opacity 0.1s ease-in;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.menu {
+  width: 100%;
+  margin: 4rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .share-btn {
+    background-color: $black;
+    color: $white;
+    width: 68px;
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: $black;
+  }
+
+  a,
+  button {
+    background-color: $beige;
+    width: 46px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    font-style: italic;
+    letter-spacing: 1px;
+    border: 0.5px solid $brown;
+  }
+
+  .delete {
+    border: $brown;
+    background-color: $brown;
+    color: $white;
+  }
+}
+@media screen and (max-width: $small-screen) {
+  .search {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $medium-screen) {
+  .search {
+    width: 400px;
+  }
+  .input-placeholder {
+    input {
+      font-size: 13px;
+    }
+
+    input::placeholder {
+      font-size: 12px;
+    }
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 20px;
+
+    div {
+      display: flex;
+      position: absolute;
+      right: 0;
+      flex-direction: row;
+      gap: 20px;
+    }
+    a,
+    button {
+      width: 80px;
+      height: 36px;
+    }
+  }
+}
+
+@media screen and (min-width: $xlarge-screen) {
+  .menu {
+    justify-content: center;
+  }
+}
+
+select {
+  margin: 20px 0 20px 0;
+}
