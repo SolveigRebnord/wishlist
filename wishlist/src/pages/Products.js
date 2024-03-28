@@ -90,7 +90,6 @@ export default function Products() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [reachedBottom]);
-console.log(products)
   return (
     <>
       <Search setProducts={setProducts} />
